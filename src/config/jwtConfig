@@ -1,5 +1,5 @@
 module.exports = {
   secret: 'your-secret-key',
-  expiresIn: '1445h', // Token expiration time
+  expiresIn: '9999h', // Token expiration time
   limit: '10', // Limit record
 };

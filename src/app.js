@@ -5,6 +5,7 @@ const dbConfig = require('./config/dbConfig');
 const accountRoutes = require('./routes/accountRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
 const fieldRoutes = require('./routes/fieldRoutes');
+const commentRoutes = require('./routes/commentRoutes');
 const authMiddleware = require('./middleware/authenticationMiddleware');
 const path = require('path');
 
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 app.use('/account', accountRoutes);
 app.use('/booking', bookingRoutes);
 app.use('/field', fieldRoutes);
+app.use('/comment', commentRoutes);
 app.use('/api', authMiddleware.authenticateToken);
 
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
